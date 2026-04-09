@@ -578,6 +578,7 @@ section + section {
 
 .hero-edu-main {
   display: flex;
+  flex-direction: column; /* 👈 this is the key change */
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
