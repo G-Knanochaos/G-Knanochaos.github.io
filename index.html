@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gavin-Kai Vida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== INTRO OVERLAY ===================== -->
+  <div id="intro" class="intro-overlay">
+    <div class="intro-grid"></div>
+    <button class="skip-btn" id="skip-btn">SKIP INTRO</button>
+
+    <div class="intro-stage">
+      <svg class="blueprint-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+        <!-- Outer double border -->
+        <rect class="bp bp-border" x="15" y="15" width="770" height="470"/>
+        <rect class="bp bp-border-inner" x="25" y="25" width="750" height="450"/>
+
+        <!-- Corner registration marks -->
+        <line class="bp bp-corner" x1="15" y1="55"  x2="50"  y2="55"/>
+        <line class="bp bp-corner" x1="55" y1="15"  x2="55"  y2="50"/>
+        <line class="bp bp-corner" x1="785" y1="55" x2="750" y2="55"/>
+        <line class="bp bp-corner" x1="745" y1="15" x2="745" y2="50"/>
+        <line class="bp bp-corner" x1="15" y1="445"  x2="50"  y2="445"/>
+        <line class="bp bp-corner" x1="55" y1="485"  x2="55"  y2="450"/>
+        <line class="bp bp-corner" x1="785" y1="445" x2="750" y2="445"/>
+        <line class="bp bp-corner" x1="745" y1="485" x2="745" y2="450"/>
+
+        <!-- Title block (bottom-right) -->
+        <rect class="bp bp-titleblock" x="555" y="360" width="215" height="115"/>
+        <line class="bp bp-titleblock" x1="555" y1="390" x2="770" y2="390"/>
+        <line class="bp bp-titleblock" x1="555" y1="415" x2="770" y2="415"/>
+        <line class="bp bp-titleblock" x1="555" y1="438" x2="770" y2="438"/>
+        <line class="bp bp-titleblock" x1="555" y1="458" x2="770" y2="458"/>
+        <line class="bp bp-titleblock" x1="648" y1="390" x2="648" y2="475"/>
+
+        <!-- Revision triangle -->
+        <polygon class="bp bp-corner" points="37,37 57,37 47,55"/>
+
+        <!-- Main cross-section indicator lines -->
+        <line class="bp bp-cross" x1="30"  y1="215" x2="530" y2="215"/>
+        <line class="bp bp-cross" x1="285" y1="30"  x2="285" y2="350"/>
+
+        <!-- Main circle (plan view subject) -->
+        <circle class="bp bp-circle-lg"  cx="285" cy="215" r="115"/>
+        <circle class="bp bp-circle-md"  cx="285" cy="215" r="80"/>
+        <circle class="bp bp-circle-sm"  cx="285" cy="215" r="22"/>
+        <circle class="bp bp-circle-dot" cx="285" cy="215" r="5"/>
+
+        <!-- Horizontal dimension line -->
+        <line class="bp bp-dim" x1="170" y1="350" x2="400" y2="350"/>
+        <line class="bp bp-dim" x1="170" y1="342" x2="170" y2="358"/>
+        <line class="bp bp-dim" x1="400" y1="342" x2="400" y2="358"/>
+
+        <!-- Vertical dimension line -->
+        <line class="bp bp-dim" x1="430" y1="100" x2="430" y2="330"/>
+        <line class="bp bp-dim" x1="422" y1="100" x2="438" y2="100"/>
+        <line class="bp bp-dim" x1="422" y1="330" x2="438" y2="330"/>
+
+        <!-- Callout leader lines -->
+        <line class="bp bp-leader" x1="375" y1="148" x2="490" y2="105"/>
+        <line class="bp bp-leader" x1="490" y1="105" x2="545" y2="105"/>
+        <circle class="bp bp-leader-dot" cx="375" cy="148" r="4"/>
+
+        <line class="bp bp-leader" x1="370" y1="275" x2="490" y2="305"/>
+        <line class="bp bp-leader" x1="490" y1="305" x2="545" y2="305"/>
+        <circle class="bp bp-leader-dot" cx="370" cy="275" r="4"/>
+
+        <line class="bp bp-leader" x1="285" y1="98"  x2="200" y2="60"/>
+        <line class="bp bp-leader" x1="140" y1="60"  x2="200" y2="60"/>
+        <circle class="bp bp-leader-dot" cx="285" cy="98" r="4"/>
+
+        <!-- Section view arrow -->
+        <line class="bp bp-dim" x1="530" y1="180" x2="530" y2="250"/>
+        <polygon class="bp bp-arrow" points="524,198 530,180 536,198"/>
+        <polygon class="bp bp-arrow" points="524,232 530,250 536,232"/>
+      </svg>
+
+      <!-- Floating text annotations (appear after SVG draws) -->
+      <div class="ann ann-top-left">
+        <span class="ann-key">REVISION</span>
+        <span class="ann-val">REV. 1 — AGE 19</span>
+      </div>
+
+      <div class="ann ann-callout-top">
+        <span class="ann-key">CONFIGURATION</span>
+        <span class="ann-val">BUILDER / SELLER / ENGINEER</span>
+      </div>
+
+      <div class="ann ann-callout-mid">
+        <span class="ann-key">MATERIAL</span>
+        <span class="ann-val">UCLA MECH. ENGINEERING</span>
+      </div>
+
+      <div class="ann ann-dim-h">
+        <span class="ann-dim-val">Ø 230 — FULL STACK</span>
+      </div>
+
+      <div class="ann ann-dim-v">
+        <span class="ann-dim-val">230 — AI / STRATEGY</span>
+      </div>
+
+      <div class="ann ann-titleblock">
+        <span class="ann-key">DRAWN BY</span>
+        <span class="ann-tb-name">GAVIN-KAI VIDA</span>
+        <span class="ann-key" style="margin-top:6px">DWG NO.</span>
+        <span class="ann-tb-sub">GKV-2026</span>
+        <span class="ann-key" style="margin-top:6px">SCALE</span>
+        <span class="ann-tb-sub">1:1 (FULL SCALE)</span>
+        <span class="ann-key" style="margin-top:6px">SHEET</span>
+        <span class="ann-tb-sub">01 OF 01</span>
+      </div>
+    </div>
+
+    <button class="enter-btn" id="enter-btn">ENTER SITE →</button>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">GKV <span class="nav-rev">/ REV.1</span></a>
+      <div class="nav-links">
+        <a href="#systems">SYSTEMS</a>
+        <a href="#background">READINGS</a>
+        <a href="#fun">FUN</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <a href="mailto:gkaivida@g.ucla.edu" class="nav-cta">GET IN TOUCH</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <img src="media/BeachLover.png" alt="Gavin-Kai Vida" class="hero-photo">
+      </div>
+      <div class="hero-eyebrow">DRAWING NO. GKV-2026 — REV. 1</div>
+      <h1 class="hero-name">
+        GAVIN-KAI<br>
+        <span class="hero-name-outline">VIDA</span>
+      </h1>
+      <p class="hero-tagline">
+        I build systems that work.<br>Then I make people want them.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">MECHANICAL ENGINEER</span>
+        <span class="tag tag-accent">FULL-STACK BUILDER</span>
+        <span class="tag">FOUNDER</span>
+        <span class="tag tag-accent">CONSULTANT</span>
+        <span class="tag">FUTURE YC</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#systems" class="btn-primary">SEE MY WORK ↓</a>
+        <a href="mailto:gkaivida@g.ucla.edu" class="btn-ghost">GET IN TOUCH</a>
+      </div>
+    </div>
+
+    <div class="hero-spec">
+      <div class="hero-edu">
+        <div class="spec-key">EDUCATION</div>
+        <div class="hero-edu-main">
+          <div class="hero-edu-school">University of California, Los Angeles</div>
+          <div class="hero-edu-degree">B.S. Mechanical Engineering &nbsp;·&nbsp; Data Engineering Minor</div>
+          <div class="hero-edu-gpa">GPA 3.88 &nbsp;·&nbsp; Expected Jun 2029</div>
+        </div>
+      </div>
+      <div class="spec-sub-label">COMPONENT BREAKDOWN</div>
+      <div class="skill-list">
+        <div class="skill-row">
+          <span class="skill-name">Full-Stack Dev</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div>
+          <span class="skill-pct">90</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">AI / Automation</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:85%"></div></div>
+          <span class="skill-pct">85</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Systems Design</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:88%"></div></div>
+          <span class="skill-pct">88</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Strategy</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div>
+          <span class="skill-pct">80</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Mech. Engineering / CAD</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:74%"></div></div>
+          <span class="skill-pct">74</span>
+        </div>
+      </div>
+
+      <div class="spec-field" style="margin-top:28px">
+        <span class="spec-key">SKILLS</span>
+        <div class="chip-row">
+          <span class="chip">Django</span>
+          <span class="chip">React</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">n8n</span>
+          <span class="chip">Revit</span>
+          <span class="chip">Fusion360</span>
+          <span class="chip">Arduino</span>
+          <span class="chip">NuxtJS</span>
+          <span class="chip">Nginx</span>
+        </div>
+      </div>
+
+      <div class="spec-callout" style="margin-top:24px">
+        <div class="callout-bracket"></div>
+        <p>"I think in systems. I think ahead."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SYSTEMS BUILT ===================== -->
+  <section id="systems">
+    <div class="section-label">SHEET 01 — SYSTEMS BUILT</div>
+    <div class="section-header reveal">
+      <h2>Systems Built</h2>
+      <div class="header-rule"></div>
+    </div>
+    <p class="section-intro reveal">Every role: find the broken system, replace it with something better. Here's the paper trail.</p>
+
+    <div class="systems-grid">
+
+      <div class="sys-card sys-featured reveal">
+        <div class="sys-img">
+          <img src="media/CommonIntern.png" alt="CommonIntern.com" loading="lazy">
+        </div>
+        <div class="sys-card-top">
+          <span class="sys-status sys-running">● RUNNING</span>
+          <span class="sys-num">SYS-001</span>
+        </div>
+        <h3 class="sys-title">CommonIntern.com</h3>
+        <div class="sys-role">Founder &amp; CEO · Jun 2025 – Present</div>
+        <p class="sys-desc">AI platform that matches students with 14,000+ researchers and automates personalized cold email outreach. Research opportunities are opaque, applications are slow, and most students have no idea where to start. This automates the whole pipeline.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">150+</span><span class="metric-l">MAU</span></div>
+          <div class="metric"><span class="metric-n">400K+</span><span class="metric-l">IMPRESSIONS</span></div>
+          <div class="metric"><span class="metric-n">14K+</span><span class="metric-l">RESEARCHERS</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip chip-accent">React</span>
+          <span class="chip chip-accent">Django</span>
+          <span class="chip chip-accent">AI Outreach</span>
+        </div>
+      </div>
+
+      <div class="sys-card reveal">
+        <div class="sys-img">
+          <img src="media/AIUConsulting.png" alt="Presenting at UConsulting" loading="lazy">
+        </div>
+        <div class="sys-card-top">
+          <span class="sys-status sys-running">● ACTIVE</span>
+          <span class="sys-num">SYS-002</span>
+        </div>
+        <h3 class="sys-title">UConsulting — AI Pipeline</h3>
+        <div class="sys-role">Director of AI &amp; Tech Strategy · Jun 2025 – Present</div>
+        <p class="sys-desc">Built a cold email pipeline using Apps Script, BrightData, and AI personalization that tripled Fortune 500 meetings booked, including Uber, Snapchat, Vanguard, and Rocketlab. Also sole launch engineer for the ATS during live recruitment: 500+ applicants, 200+ DAU, bugs fixed within 24 hours.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">3×</span><span class="metric-l">MEETINGS</span></div>
+          <div class="metric"><span class="metric-n">500+</span><span class="metric-l">APPLICANTS</span></div>
+          <div class="metric"><span class="metric-n">200+</span><span class="metric-l">DAU</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Apps Script</span>
+          <span class="chip">BrightData</span>
+          <span class="chip">React</span>
+        </div>
+      </div>
+
+      <div class="sys-card reveal">
+        <div class="sys-card-top">
+          <span class="sys-status sys-shipped">✓ SHIPPED</span>
+          <span class="sys-num">SYS-003</span>
+        </div>
+        <h3 class="sys-title">STAX — Incident Reporting</h3>
+        <div class="sys-role">AI Engineering Intern · Sep–Dec 2025</div>
+        <p class="sys-desc">The team was tracking 700+ live incidents through Slack threads. Built a proper system with n8n automations, PgAdmin for database management, OAuth RBAC, and Railway hosting. Non-technical team members can run it without help.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">700+</span><span class="metric-l">INCIDENTS TRACKED</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">React</span>
+          <span class="chip">Django</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">n8n</span>
+        </div>
+      </div>
+
+      <div class="sys-card reveal">
+        <div class="sys-img">
+          <img src="media/PresentingHallmate.png" alt="Presenting Hallmate to faculty" loading="lazy">
+        </div>
+        <div class="sys-card-top">
+          <span class="sys-status sys-shipped">✓ SHIPPED</span>
+          <span class="sys-num">SYS-004</span>
+        </div>
+        <h3 class="sys-title">Hallmate — Digital Hall Pass</h3>
+        <div class="sys-role">Head Developer · May 2024–May 2025</div>
+        <p class="sys-desc">$3,000/yr vendor. Replaced it with an in-house system built on school LAN with Django, NuxtJS, live WebSocket updates, RBAC, self-signed encryption, and district compliance. Survived 50+ faculty stakeholders, district IT scrutiny, and a full school year.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">$3K+</span><span class="metric-l">ANNUAL SAVINGS</span></div>
+          <div class="metric"><span class="metric-n">50+</span><span class="metric-l">FACULTY USERS</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Django</span>
+          <span class="chip">NuxtJS</span>
+          <span class="chip">WebSockets</span>
+          <span class="chip">Nginx</span>
+        </div>
+      </div>
+
+      <div class="sys-card reveal">
+        <div class="sys-card-top">
+          <span class="sys-status sys-shipped">✓ SHIPPED</span>
+          <span class="sys-num">SYS-005</span>
+        </div>
+        <h3 class="sys-title">LA Metro — Atlantic Station</h3>
+        <div class="sys-role">Student Intern · Jun–Aug 2025</div>
+        <p class="sys-desc">Engineered precise 3D BIM models and blueprints for the Atlantic Station architectural redesign, covering plumbing, electrical, and structural systems. Collaborated with Civil Engineers in Program Management. Presented to Metro C-suite and 500+ constituents. This site was inspired by that work.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">500+</span><span class="metric-l">CONSTITUENTS BRIEFED</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Autodesk Revit</span>
+          <span class="chip">BIM</span>
+          <span class="chip">Civil Engineering</span>
+        </div>
+      </div>
+
+      <div class="sys-card reveal">
+        <div class="sys-img">
+          <img src="media/TeachingKidsAtSimplyCS.png" alt="Teaching Python at SimplyCS" loading="lazy">
+        </div>
+        <div class="sys-card-top">
+          <span class="sys-status sys-shipped">✓ COMPLETED</span>
+          <span class="sys-num">SYS-006</span>
+        </div>
+        <h3 class="sys-title">SimplyCS — Nonprofit</h3>
+        <div class="sys-role">Founder, President &amp; Teacher · Aug 2023–May 2025</div>
+        <p class="sys-desc">Founded a nonprofit to teach foundational CS and Python to underserved communities. Ran 23 classes (39 instructional hours) for 80 youth at libraries and elementary schools. Ran 2 summer camps raising $3.5K. Partnered with Computers2Kids 501(c)(3) to purchase and donate 19 laptop/headset sets ($6.6K value) to Elliot Elementary students after a 5-week Python course.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">80</span><span class="metric-l">YOUTH TAUGHT</span></div>
+          <div class="metric"><span class="metric-n">39</span><span class="metric-l">INSTR. HOURS</span></div>
+          <div class="metric"><span class="metric-n">$6.6K</span><span class="metric-l">DONATED</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Python</span>
+          <span class="chip">Nonprofit</span>
+          <span class="chip">501(c)(3)</span>
+        </div>
+      </div>
+
+      <div class="sys-card reveal">
+        <div class="sys-card-top">
+          <span class="sys-status sys-shipped">✓ SHIPPED</span>
+          <span class="sys-num">SYS-007</span>
+        </div>
+        <h3 class="sys-title">NASDAQ 100 — Strategy</h3>
+        <div class="sys-role">Strategy Consultant (NDA) · Sep–Dec 2025</div>
+        <p class="sys-desc">Synthesized 20+ internal interviews and co-produced a 30-page cross-country drug access &amp; regulatory analysis justifying a global division's strategic role. Findings delivered directly to company EVP. They asked for an NDA, which is fun.</p>
+        <div class="sys-metrics">
+          <div class="metric"><span class="metric-n">30-pg</span><span class="metric-l">REPORT</span></div>
+          <div class="metric"><span class="metric-n">EVP</span><span class="metric-l">AUDIENCE</span></div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Strategy</span>
+          <span class="chip">Regulatory Analysis</span>
+          <span class="chip">🤫 NDA</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== BACKGROUND PROCESSES ===================== -->
+  <section id="background">
+    <div class="section-label">SHEET 02 — READINGS</div>
+    <div class="section-header reveal">
+      <h2>Readings</h2>
+      <div class="header-rule"></div>
+    </div>
+    <p class="section-intro reveal">The things quietly running in the background that shape how I think. Think of it as a dependency list.</p>
+
+    <div class="slideshow-wrap reveal" data-slideshow>
+      <div class="slideshow-row">
+        <button class="slide-btn slide-prev" aria-label="Previous">&#8592;</button>
+        <div class="slideshow-viewport">
+          <div class="slide-track">
+
+            <!-- ATOMIC HABITS -->
+            <div class="slide">
+              <div class="reading-card">
+                <div class="reading-cover">
+                  <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+                       alt="Atomic Habits cover" loading="lazy">
+                </div>
+                <div class="reading-body">
+                  <div class="reading-top">
+                    <span class="reading-type">NON-FICTION</span>
+                    <span class="reading-status reading-loaded">● LOADED</span>
+                  </div>
+                  <h3 class="reading-title">Atomic Habits</h3>
+                  <div class="reading-author">James Clear</div>
+                  <blockquote class="reading-note">"Improvement is a system, not a resolution. This book made me stop setting goals and start designing processes. Very on-brand for someone who replaces broken systems for fun."</blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- HOW TO DO GREAT WORK -->
+            <div class="slide">
+              <div class="reading-card">
+                <div class="reading-cover reading-cover-essay">
+                  <div class="essay-pg-header">paulgraham.com</div>
+                  <div class="essay-pg-title">How to Do Great Work</div>
+                  <div class="essay-pg-date">July 2023</div>
+                </div>
+                <div class="reading-body">
+                  <div class="reading-top">
+                    <span class="reading-type">ESSAY</span>
+                    <span class="reading-status reading-loaded">● LOADED</span>
+                  </div>
+                  <h3 class="reading-title">How to Do Great Work</h3>
+                  <div class="reading-author">Paul Graham</div>
+                  <blockquote class="reading-note">"The most useful thing I've read. Finding work that feels like play to you but looks like work to everyone else is the target. Think about it constantly."</blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- HOW TO WORK HARD -->
+            <div class="slide">
+              <div class="reading-card">
+                <div class="reading-cover reading-cover-essay">
+                  <div class="essay-pg-header">paulgraham.com</div>
+                  <div class="essay-pg-title">How to Work Hard</div>
+                  <div class="essay-pg-date">June 2021</div>
+                </div>
+                <div class="reading-body">
+                  <div class="reading-top">
+                    <span class="reading-type">ESSAY</span>
+                    <span class="reading-status reading-loaded">● LOADED</span>
+                  </div>
+                  <h3 class="reading-title">How to Work Hard</h3>
+                  <div class="reading-author">Paul Graham</div>
+                  <blockquote class="reading-note">"The distinction between working hard on the right things vs. just grinding. Effort without direction is mostly noise. Taught me to check the compass before pushing harder."</blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- WHAT YOU'LL WISH YOU'D KNOWN -->
+            <div class="slide">
+              <div class="reading-card">
+                <div class="reading-cover reading-cover-essay">
+                  <div class="essay-pg-header">paulgraham.com</div>
+                  <div class="essay-pg-title">What You'll Wish You'd Known</div>
+                  <div class="essay-pg-date">January 2005</div>
+                </div>
+                <div class="reading-body">
+                  <div class="reading-top">
+                    <span class="reading-type">ESSAY</span>
+                    <span class="reading-status reading-loaded">● LOADED</span>
+                  </div>
+                  <h3 class="reading-title">What You'll Wish You'd Known</h3>
+                  <div class="reading-author">Paul Graham</div>
+                  <blockquote class="reading-note">"I read this at 16. I'm still catching up to the advice. Stay curious, keep your options open, do things that matter to you now. Switching to ME from CS is this essay working."</blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- ENDER'S GAME -->
+            <div class="slide">
+              <div class="reading-card">
+                <div class="reading-cover">
+                  <img src="https://covers.openlibrary.org/b/isbn/9780812550702-L.jpg"
+                       alt="Ender's Game cover" loading="lazy">
+                </div>
+                <div class="reading-body">
+                  <div class="reading-top">
+                    <span class="reading-type">FICTION</span>
+                    <span class="reading-status">● FORMATIVE</span>
+                  </div>
+                  <h3 class="reading-title">Ender's Game</h3>
+                  <div class="reading-author">Orson Scott Card</div>
+                  <blockquote class="reading-note">"A book about a child prodigy deployed into high-stakes environments by adults who underestimate him. I found it relatable. Make of that what you will."</blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- TOMORROW AND TOMORROW AND TOMORROW -->
+            <div class="slide">
+              <div class="reading-card">
+                <div class="reading-cover">
+                  <img src="https://covers.openlibrary.org/b/isbn/9780593321201-L.jpg"
+                       alt="Tomorrow, and Tomorrow, and Tomorrow cover" loading="lazy">
+                </div>
+                <div class="reading-body">
+                  <div class="reading-top">
+                    <span class="reading-type">FICTION</span>
+                    <span class="reading-status">● FORMATIVE</span>
+                  </div>
+                  <h3 class="reading-title">Tomorrow, and Tomorrow, and Tomorrow</h3>
+                  <div class="reading-author">Gabrielle Zevin</div>
+                  <blockquote class="reading-note">"Proof that making things with people you care about is the point. The odd one out in this list, but it belongs here."</blockquote>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="slide-btn slide-next" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FUN ===================== -->
+  <section id="fun">
+    <div class="section-label">SHEET 03 — NOT ON THE RESUME</div>
+    <div class="section-header reveal">
+      <h2>Not on the Resume</h2>
+      <div class="header-rule"></div>
+    </div>
+
+    <div class="slideshow-wrap reveal" data-slideshow>
+      <div class="slideshow-row">
+        <button class="slide-btn slide-prev" aria-label="Previous">&#8592;</button>
+        <div class="slideshow-viewport">
+          <div class="slide-track">
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-img-wrap">
+                  <img src="media/SingingAtTalentShow.png" alt="Singing at talent show" loading="lazy">
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">TALENT SHOW</span>
+                  <p>Surprisingly not bad. People clapped.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-img-wrap">
+                  <img src="media/FlowerEnthusiast.png" alt="Smelling roses" loading="lazy">
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">CERTIFIED FLOWER ENTHUSIAST</span>
+                  <p>Work-life balance looks different for everyone.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-img-wrap">
+                  <img src="media/CertifiedArsonistandNaturalist(joke).png" alt="Holding a burning stick at night" loading="lazy">
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">CERTIFIED ARSONIST &amp; NATURALIST</span>
+                  <p>Jokes. Love the beach though. HMU if in LA and looking to hike.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-img-wrap">
+                  <img src="media/HSValedictorianatWHS(Cali1).png" alt="Valedictorian at Whitney High School" loading="lazy">
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">VALEDICTORIAN, WHITNEY H.S.</span>
+                  <p>Top of the class. Cerritos, CA. California ranked #1 High School.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-img-wrap">
+                  <img src="media/EpsteinRanks.com.png" alt="EpsteinRank.com screenshot" loading="lazy">
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label"><a href="https://epsteinrank.com" target="_blank" rel="noopener" class="fun-ext-link">EPSTEINRANK.COM ↗</a></span>
+                  <p>A website I made. Judge accordingly.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-video-wrap">
+                  <video controls preload="metadata" class="fun-video">
+                    <source src="media/PiezoelectricShoeDemonstration.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                  </video>
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">PIEZOELECTRIC SHOE — DEMO</span>
+                  <p>Shoe that generates electricity from walking. Built from scratch.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-video-wrap">
+                  <video controls preload="metadata" class="fun-video">
+                    <source src="media/AssemblingPiezoElectricShoe.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                  </video>
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">PIEZOELECTRIC SHOE — ASSEMBLY</span>
+                  <p>Building it. The wiring phase was a character-building experience.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="fun-card">
+                <div class="fun-video-wrap">
+                  <video controls preload="metadata" class="fun-video">
+                    <source src="media/ScienceOlympiadRobot(2cm%20of%20error%20in%208m%20%26%201%20second%20of%20error%20in%202%20minute).mp4" type="video/mp4">
+                    Your browser does not support this video.
+                  </video>
+                </div>
+                <div class="fun-caption">
+                  <span class="fun-label">SCIENCE OLYMPIAD ROBOT</span>
+                  <p>2cm of error in 8m, 1 second of error in 2 minutes. Built by hand from scratch. Place top 10 in California.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="slide-btn slide-next" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="section-label">SHEET 04 — CONTACT</div>
+    <div class="contact-layout">
+      <div class="contact-content">
+        <h2 class="contact-heading reveal">Let's Build<br><span class="contact-heading-accent">Something.</span></h2>
+        <p class="contact-sub reveal">If you have a system that needs fixing, a project that needs a technical co-founder, or just want to talk robotics and Paul Graham, reach out.</p>
+
+        <div class="contact-links reveal">
+          <a href="mailto:gkaivida@g.ucla.edu" class="contact-link contact-primary">
+            <span class="contact-link-label">EMAIL</span>
+            gkaivida@g.ucla.edu
+          </a>
+          <a href="https://commonintern.com" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-label">STARTUP</span>
+            CommonIntern.com ↗
+          </a>
+          <a href="https://www.linkedin.com/in/gavin-kai-vida-292ab8286/" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-label">LINKEDIN</span>
+            gavin-kai-vida ↗
+          </a>
+          <a href="https://github.com/G-Knanochaos" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-label">GITHUB</span>
+            G-Knanochaos ↗
+          </a>
+        </div>
+
+        <div class="contact-status reveal">
+          <span class="spec-key">CURRENT STATUS</span>
+          <span class="contact-status-val">Open to internships, consulting projects, and ambitious conversations.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">GKV / REV.1</span>
+      <span class="footer-note">Built from scratch. No templates. ±24hr turnaround guaranteed.</span>
+      <span class="footer-copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
