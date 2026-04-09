@@ -6,54 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =====================================================
-     1. INTRO SVG — set correct stroke-dasharray lengths
-     ===================================================== */
-
-  // Each SVG stroked element needs dasharray = its own path length
-  // so the draw animation works at the right speed
-  document.querySelectorAll('.blueprint-svg .bp').forEach(el => {
-    try {
-      const len = el.getTotalLength ? el.getTotalLength() : 3000;
-      el.style.strokeDasharray = len;
-      // stroke-dashoffset is set to same value in @keyframes `from`
-      // via CSS variable --len. We set it here as an inline style too
-      // so the initial hidden state is correct before animation fires.
-      el.style.strokeDashoffset = len;
-    } catch (_) {
-      el.style.strokeDasharray = 3000;
-      el.style.strokeDashoffset = 3000;
-    }
-  });
-
-
-  /* =====================================================
-     2. INTRO DISMISS
-     ===================================================== */
-
-  const intro   = document.getElementById('intro');
-  const skipBtn = document.getElementById('skip-btn');
-  const nav     = document.getElementById('nav');
-
-  function dismissIntro() {
-    intro.classList.add('hidden');
-    nav.classList.add('visible');
-    document.body.style.overflow = '';
-  }
-
-  // Lock scroll during intro
-  document.body.style.overflow = 'hidden';
-
-  const enterBtn = document.getElementById('enter-btn');
-
-  // Skip jumps straight through, bypassing the animation wait
-  skipBtn.addEventListener('click', dismissIntro);
-
-  // Enter button appears after animations finish and waits for the user
-  if (enterBtn) enterBtn.addEventListener('click', dismissIntro);
-
-
-  /* =====================================================
-     3. NAV — show after intro, highlight active section
+     1. NAV — highlight active section
      ===================================================== */
 
   const navLinks = document.querySelectorAll('.nav-links a');
