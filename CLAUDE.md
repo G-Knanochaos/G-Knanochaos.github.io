@@ -15,10 +15,12 @@ Gavin-Kai Vida's personal website. Static site (HTML/CSS/JS), hosted on GitHub P
 
 ## Who Gavin Is
 
-- UCLA Mechanical Engineering, Data Engineering minor. GPA 3.88. Expected Jun 2029.
+- UCLA Mechanical Engineering, Data Science Engineering minor. GPA 3.8. Expected Jun 2029.
 - Valedictorian, Whitney High School (Cerritos, CA).
-- Founder & CEO, CommonIntern.com — AI researcher-matching platform, 150+ MAU.
-- Director of AI & Tech Strategy, UConsulting — clients include Uber, Snapchat, Vanguard, Rocketlab.
+- Co-founder & Head of Product, BesideAI (gobesideai.com) — AI implementation agency. This is the main thing now and stays the featured card.
+- Founder & CEO, CommonIntern.com (Jun 2025 to Jun 2026) — AI researcher-matching platform, 150+ MAU.
+- Director of AI & Tech Strategy, UConsulting — clients include Uber, Snapchat, Vanguard.
+- Founder Intern, Hologram Labs (ReDirect iOS app). Project Manager & Strategy Consultant, Astor (YC S25).
 - AI Engineering Intern, STAX Engineering. Strategy Consultant, NASDAQ 100 co. (NDA). LA Metro intern.
 - Founded SimplyCS (nonprofit) — taught Python to 80 youth, donated $6.6K in laptops to Elliot Elementary.
 - Started in CS, switched to ME: LLMs are eating software, generalist robotics is the next frontier.
@@ -47,8 +49,8 @@ Gavin-Kai Vida's personal website. Static site (HTML/CSS/JS), hosted on GitHub P
 ## Site Structure
 
 1. **Intro overlay** — SVG blueprint draws itself sequentially, "ENTER SITE →" button appears at ~5.2s. "SKIP INTRO" top-right.
-2. **#hero** — Name, tagline, tags, actions. Right panel: education block (UCLA + valedictorian photo) + skill bars + tech chips + callout quote. BeachLover circular profile photo above name.
-3. **#systems (SHEET 01)** — 3-col grid of work/project cards. SYS-001 (CommonIntern) is featured (spans 2 cols). SYS-002, SYS-004, SYS-006 have photo banners.
+2. **#hero** — Name, tagline, tags, actions. Right panel: NOW block (BesideAI) + education block (UCLA + valedictorian photo) + skill bars + tech chips + callout quote. BeachLover circular profile photo above name.
+3. **#systems (SHEET 01)** — 3-col grid of work/project cards. SYS-001 (BesideAI) is featured (spans 2 cols, taller banner). SYS-001, SYS-002, SYS-005, SYS-007, SYS-009 have photo banners.
 4. **#background (SHEET 02)** — Reading cards with book covers (Open Library API) or essay placeholders for PG essays.
 5. **#fun (SHEET 03)** — "Not on the Resume" photo grid: talent show, flower enthusiast, arsonist & naturalist.
 6. **#contact (SHEET 04)** — Heading, links (email, CommonIntern, LinkedIn, GitHub), status.
@@ -67,9 +69,11 @@ Gavin-Kai Vida's personal website. Static site (HTML/CSS/JS), hosted on GitHub P
 |------|---------|
 | `BeachLover.png` | Hero profile photo (circular crop) |
 | `HSValedictorianatWHS(Cali#1).png` | Hero education block (portrait thumbnail) |
+| `BesideAI.png` | SYS-001 card banner (featured) |
 | `AIUConsulting.png` | SYS-002 card banner |
-| `PresentingHallmate.png` | SYS-004 card banner |
-| `TeachingKidsAtSimplyCS.png` | SYS-006 card banner |
+| `CommonIntern.png` | SYS-005 card banner |
+| `PresentingHallmate.png` | SYS-007 card banner |
+| `TeachingKidsAtSimplyCS.png` | SYS-009 card banner |
 | `SingingAtTalentShow.png` | Fun section |
 | `FlowerEnthusiast.png` | Fun section |
 | `CertifiedArsonistandNaturalist(joke).png` | Fun section |
