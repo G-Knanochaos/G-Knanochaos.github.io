@@ -15,15 +15,14 @@ Gavin-Kai Vida's personal website. Static site (HTML/CSS/JS), hosted on GitHub P
 
 ## Who Gavin Is
 
-- UCLA Mechanical Engineering, Data Science Engineering minor. GPA 3.8. Expected Jun 2029.
+- UCLA Computer Engineering, Data Science Engineering minor. GPA 3.8. Expected Jun 2029.
 - Valedictorian, Whitney High School (Cerritos, CA).
-- Co-founder & Head of Product, BesideAI (gobesideai.com) — AI implementation agency. This is the main thing now and stays the featured card.
+- Co-founder & Head of Product, BesideAI (gobesideai.com) — AI implementation agency. $60K ARR in 3 months, $34K hire avoided, 500+ hrs/yr saved for clients. This is the main thing now and stays the featured card.
 - Founder & CEO, CommonIntern.com (Jun 2025 to Jun 2026) — AI researcher-matching platform, 150+ MAU.
 - Director of AI & Tech Strategy, UConsulting — clients include Uber, Snapchat, Vanguard.
 - Founder Intern, Hologram Labs (ReDirect iOS app). Project Manager & Strategy Consultant, Astor (YC S25).
 - AI Engineering Intern, STAX Engineering. Strategy Consultant, NASDAQ 100 co. (NDA). LA Metro intern.
 - Founded SimplyCS (nonprofit) — taught Python to 80 youth, donated $6.6K in laptops to Elliot Elementary.
-- Started in CS, switched to ME: LLMs are eating software, generalist robotics is the next frontier.
 - End goal: build AND sell. YC-funded startup.
 - Core thesis: "I think in systems. I think ahead."
 
